@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ACEADDON=/acestream.engine
+
+find $ACEADDON/.ACEStream/collected_torrent_files -depth -type f -mmin +15 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
