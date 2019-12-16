@@ -8,6 +8,21 @@ python3 python3-setuptools python3-dev python3-pip python3-gevent python3-psutil
 python3 -m pip install --upgrade pip && \
 cd /opt && git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
 
+# config HTTPAceProxy
+RUN \
+mkdir -p /films && cd /opt/HTTPAceProxy && \ 
+sed -i -e 's/use_chunked = True/use_chunked = False/' \
+    -e 's/loglevel = logging.INFO/loglevel = logging.DEBUG/' aceconfig.py \ 
+    -e "s|url = ''|url = 'file:///opt/lists/as.m3u'|" \
+    -e 's/updateevery = 0/updateevery = 60/' plugins/config/torrenttv.py \
+    -e "s|url = 'http://allfon-tv.com/autogenplaylist/allfontv.m3u'\
+|url = 'http://pomoyka.win/trash/ttv-list/allfon.all.player.m3u'|" plugins/config/allfon.py \
+|awk '{if (match($0, "directory")) $3="\x27/films\x27"; \
+if (match($0, "updateevery")) $3="180"; print $0}' plugins/config/torrentfilms.py \
+|tee plugins/config/torrentfilms.py > /dev/null; cd 
+
+VOLUME ["/films"]
+
 ADD acestream_3.1.50_armv7.tar.gz /tmp
 
 COPY acestream.conf /tmp
