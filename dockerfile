@@ -12,7 +12,7 @@ cd /opt && git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
 RUN \
 mkdir -p /films && cd /opt/HTTPAceProxy && \ 
 sed -i -e 's/use_chunked = True/use_chunked = False/' \
-    -e 's/httphost = 'auto'/httphost = '0.0.0.0'/' \
+    -e "s|httphost = 'auto'|httphost = '0.0.0.0'|" \
     -e 's/loglevel = logging.INFO/loglevel = logging.DEBUG/' aceconfig.py \ 
     -e "s|url = ''|url = 'file:///opt/lists/as.m3u'|" \
     -e 's/updateevery = 0/updateevery = 60/' plugins/config/torrenttv.py \
