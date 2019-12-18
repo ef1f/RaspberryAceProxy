@@ -8,8 +8,7 @@ RUN \
 apt-get update -y && \
 apt-get install -y --no-install-recommends \ 
 mc wget git procps supervisor ffmpeg cron \
-python3 python3-setuptools python3-dev python3-pip python3-gevent python3-psutil python-m2crypto && \
-python3 -m pip install --upgrade pip && \
+python3 python3-setuptools python3-pip python3-gevent python3-psutil python-m2crypto && \
 cd /opt && git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
 
 # config HTTPAceProxy
