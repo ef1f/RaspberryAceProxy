@@ -1,12 +1,14 @@
 FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Moscow
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN \
 apt-get update -y && \
 apt-get install -y --no-install-recommends \ 
-apt-utils wget git procps supervisor ffmpeg cron \
-python3 python3-setuptools python3-dev python3-pip python3-gevent python3-psutil python3-pkg-resources gcc && \
+mc wget git procps supervisor ffmpeg cron \
+python3 python3-setuptools python3-dev python3-pip python3-gevent python3-psutil python-m2crypto && \
 python3 -m pip install --upgrade pip && \
 cd /opt && git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
 
