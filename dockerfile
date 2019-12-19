@@ -2,7 +2,6 @@ FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Moscow
-ENV CHUNKED = True
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN \
@@ -15,7 +14,7 @@ cd /opt && git clone https://github.com/pepsik-kiev/HTTPAceProxy.git
 # config HTTPAceProxy
 RUN \
 mkdir -p /films && cd /opt/HTTPAceProxy && \ 
-sed -i -e 's/use_chunked = True/use_chunked = $CHUNKED/' \
+sed -i -e 's/use_chunked = True/use_chunked = True/' \
     -e "s|httphost = 'auto'|httphost = '0.0.0.0'|" \
     -e 's/loglevel = logging.INFO/loglevel = logging.DEBUG/' aceconfig.py \ 
     -e "s|url = ''|url = 'file:///opt/lists/as.m3u'|" \
