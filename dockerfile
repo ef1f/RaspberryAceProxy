@@ -39,8 +39,6 @@ RUN cd /tmp/acestream.engine && \
     mkdir -p /system/etc && \
     ln -s /etc/resolv.conf /system/etc/resolv.conf && \
     ln -s /etc/hosts /system/etc/hosts && \
-    #echo "67.215.246.10 router.bittorrent.com" >> /system/etc/hosts && \
-    #echo "87.98.162.88 dht.transmissionbt.com" >> /system/etc/hosts && \
     cat /system/etc/resolv.conf && cat /system/etc/hosts && \
     mv /tmp/acestream.conf /acestream.engine && \
     chown -R root:root /system && \
