@@ -28,7 +28,7 @@ if (match($0, "updateevery")) $3="180"; print $0}' plugins/config/torrentfilms.p
 VOLUME ["/films"]
 
 # Add and config AceStrem
-ADD acestream_3.1.50_armv7.tar.gz /tmp
+ADD engine_3.1.50_armv7.tar.gz /tmp
 
 COPY acestream.conf /tmp
 
