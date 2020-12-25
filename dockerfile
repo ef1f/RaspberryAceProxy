@@ -13,7 +13,7 @@ cd /opt && git clone --recursive https://github.com/pepsik-kiev/HTTPAceProxy.git
 
 # config HTTPAceProxy
 RUN \
-mkdir -p /films && cd /opt/HTTPAceProxy && \ 
+mkdir -p /films /AceProxyConfigs && cd /opt/HTTPAceProxy && \ 
 sed -i -e 's/use_chunked = True/use_chunked = True/' \
     -e "s|httphost = 'auto'|httphost = '0.0.0.0'|" \
     -e 's/loglevel = logging.INFO/loglevel = logging.DEBUG/' aceconfig.py \ 
@@ -44,7 +44,8 @@ RUN cd /tmp/acestream.engine && \
     chown -R root:root /system && \
     find /system -type d -exec chmod 755 {} \; && \
     find /system -type f -exec chmod 644 {} \; && \
-    chmod 755 /system/bin/* /acestream.engine/python/bin/python
+    chmod 755 /system/bin/* /acestream.engine/python/bin/python && \
+    cp -r /opt/HTTPAceProxy/plugins/config/* /AceProxyConfigs
 
 
 COPY aceaddon /etc/cron.hourly
@@ -52,6 +53,6 @@ RUN  chmod +x /etc/cron.hourly/aceaddon
 
 COPY ./supervisor.start.conf /etc/supervisor/conf.d/supervisor.start.conf
 
-CMD ["/usr/bin/supervisord"]
+CMD cp -rn /AceProxyConfigs/* /opt/HTTPAceProxy/plugins/config && exec /usr/bin/supervisord
 
 EXPOSE 8000 8621 6878
