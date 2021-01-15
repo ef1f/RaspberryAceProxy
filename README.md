@@ -13,7 +13,7 @@ Privileged is required only because the binaries are for 32bit binaries and woul
 ```
 docker run -d --privileged -p 8001:8000 -p8621:8621 -p6878:6878 --name ace_proxy ef1f/raspberry_ace_proxy:latest
 ```
-**Mount folders for rorrent files and HTTPAceProxy configs**
+**Mount folders for torrent files and HTTPAceProxy configs**
 ```
 docker run -d --privileged -v <Your torrent folder path>:/films -v <Your config folder path>:/opt/HTTPAceProxy/plugins/config -p 8001:8000 -p8621:8621 -p6878:6878 --name ace_proxy ef1f/raspberry_ace_proxy:latest
 ```
