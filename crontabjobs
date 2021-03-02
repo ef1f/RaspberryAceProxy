@@ -1,0 +1,10 @@
+#!/bin/sh
+#write out current crontab
+#crontab -l > mycron
+#echo new cron into cron file
+echo "0 */4 * * * /opt/ace_search/AceSearch\n" >> newcron
+#install new cron file
+crontab newcron
+rm newcron
+
+/opt/ace_search/AceSearch
