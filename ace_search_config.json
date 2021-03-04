@@ -1,0 +1,11 @@
+﻿{
+  "availability": "0.05",
+  "availabilityUpdatedAtHours": "1000",
+  "createFavorite": "true",
+  "createJson": "true",
+  "outputFolder": "/opt/lists/",
+  "playListAllFilename": "as.m3u",
+  "playListFavoriteFileName": "f.as.m3u",
+  "urlTemplate": "acestream://{0}",
+  "favoriteChannels": "History,Оружие, Техно, National Geographic, Discovery"
+}

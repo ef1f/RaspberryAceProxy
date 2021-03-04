@@ -34,7 +34,8 @@ sed -i -e 's/use_chunked = True/use_chunked = True/' \
     -e "s|url = 'http://pomoyka.win/trash/ttv-list/ace.json'|url = 'file:///opt/lists/f.as.json'|" plugins/config/torrenttelik.py \ 
 |awk '{if (match($0, "directory")) $3="\x27/films\x27"; \
 if (match($0, "updateevery")) $3="180"; print $0}' plugins/config/torrentfilms.py \
-|tee plugins/config/torrentfilms.py > /dev/null; cd 
+|tee plugins/config/torrentfilms.py > /dev/null; cd  &&\
+sed -i -e "s|CipherString = DEFAULT@SECLEVEL=2|CipherString = DEFAULT@SECLEVEL=1|" /etc/ssl/openssl.cnf
 
 VOLUME ["/films"]
 
@@ -58,6 +59,7 @@ RUN cd /tmp/acestream.engine && \
     chmod 755 /system/bin/* /acestream.engine/python/bin/python && \
     cp -r /opt/HTTPAceProxy/plugins/config/* /AceProxyConfigs
 
+COPY ace_search_config.json /AceProxyConfigs
 COPY crontabjobs /opt/ace_search
 COPY aceaddon /etc/cron.hourly
 RUN  chmod +x /etc/cron.hourly/aceaddon && chmod +x /opt/ace_search/crontabjobs
