@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim-arm32v7 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as builder
 
 WORKDIR /src
 RUN git clone --recursive https://github.com/ef1f/AceSearch.git
