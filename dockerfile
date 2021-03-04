@@ -5,7 +5,7 @@ RUN git clone --recursive https://github.com/ef1f/AceSearch.git
 WORKDIR /src/AceSearch
 RUN dotnet build --configuration Release
 
-FROM mcr.microsoft.com/dotnet/runtime:5.0-buster-slim-arm32v7
+FROM mcr.microsoft.com/dotnet/runtime:5.0
 #FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
