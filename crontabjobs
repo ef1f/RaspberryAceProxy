@@ -2,7 +2,7 @@
 #write out current crontab
 #crontab -l > mycron
 #echo new cron into cron file
-echo "0 */4 * * * /opt/ace_search/AceSearch /opt/HTTPAceProxy/plugins/config/ace_search_config.json\n" >> newcron
+echo "0 */6 * * * /opt/ace_search/AceSearch /opt/HTTPAceProxy/plugins/config/ace_search_config.json\n" >> newcron
 #install new cron file
 crontab newcron
 rm newcron
