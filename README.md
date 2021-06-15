@@ -20,7 +20,7 @@ docker run -d --privileged -v <Your torrent folder path>:/films -v <Your config 
 
 **How to use**
 
-For VLC -> Media -> Open Network Stream... -> Network, add URL http://docker_host_ip:8001/torrent-telik or http://pomoyka.win/trash/ttv-list/ace.all.proxy.m3u?ip=docker_host_ip:8001
+For VLC -> Media -> Open Network Stream... -> Network, add URL http://docker_host_ip:8001/torrent-telik,  http://docker_host_ip:8001/torrenttv
 
 AceStream Settings http://docker_host_ip:6878/webui/app/acestream/server#proxy-server-settings
 
