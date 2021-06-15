@@ -40,8 +40,8 @@ sed -i -e "s|CipherString = DEFAULT@SECLEVEL=2|CipherString = DEFAULT@SECLEVEL=1
 VOLUME ["/films"]
 
 # Add and config AceStrem
-ADD engine_3.1.50_armv7.tar.gz /tmp
-# ADD engine_3.1.61_armv7.tar.gz /tmp
+# ADD engine_3.1.50_armv7.tar.gz /tmp
+ADD engine_3.1.61_armv7.tar.gz /tmp
 
 COPY acestream.conf /tmp
 
