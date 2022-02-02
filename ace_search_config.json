@@ -1,4 +1,4 @@
-﻿{
+{
   "availability": "0.05",
   "availabilityUpdatedAtHours": "1000",
   "createFavorite": "true",
@@ -6,6 +6,22 @@
   "outputFolder": "/opt/lists/",
   "playListAllFilename": "as.m3u",
   "playListFavoriteFileName": "f.as.m3u",
-  "urlTemplate": "acestream://{0}",
-  "favoriteChannels": "History,Оружие, Техно, National Geographic, Discovery"
+  "urlTemplate": "infohash://{0}",
+    "favoriteChannels": [
+    "Candy HD, Dorcel HD, Hustler HD Europe, Playboy TV, Redlight HD, Русская ночь, Animal Planet HD, DTX, Da Vinci Learning",
+    "Discovery Science HD, Discovery Россия HD, HD-Life, History Россия HD, ID Xtra Россия, Nat Geo Wild HD, National Geographic, National Geographic HD",
+    "Outdoor channel HD, RT Д HD, Russian Travel Guide, TLC Россия, Travel channel HD, Viasat History, Viasat Nature/History HD, Авто Плюс, Авто24, Доктор",
+    "Живая планета, Живая природа HD, История, Кухня ТВ, Мама, Моя планета, Наука 2.0, Оружие, Охота и рыбалка, Страна, 1+1, 2х2, 5 канал (Россия), Armenia 1 TV",
+    "Armenia TV, BTV, Fashion TV, LNK, LRT, LTV1, TV3, Астана ТВ, БелРос, Вопросы и ответы, Время, Домашний, Звезда, КВН ТВ, КТК, Казахстан, Культура, МирТВ",
+    "НТВ (+2), НТВ HD, НТВ Мир, Ностальгия, ОТР, Первый канал (+2), Первый канал HD, Первый канал HD (+4), Пятница, РТР-Беларусь, РТР-Планета, Россия 1 (+2)",
+    "Россия HD, СТС, СТС Love, Сарафан, ТВ Центр, ТВ3 Россия, ТНТ (+2), ТНТ HD, ТНТ4, Украина, Хабар, Че, Ю, BBC World News Europe, CNN, EuroNews, Дождь, Москва-24",
+    "Россия 24, Cartoon network, JimJam, KIDS HD, Nick Jr, Nickelodeon HD, TiJi Россия, В гостях у сказки, Детский, Канал Disney, Канал О!, Карусель, Тлум HD",
+    "AXN Sci-Fi, Amedia 1, Amedia Premium, Cinema, Fox Life Россия, Fox Россия, Paramount Comedy Россия, Paramount Сhannel HD, Sony Channel, TOP CINEMA HD",
+    "TV1000 Action East, TopHORROR HD, ViP Comedy HD, ViP Megahit HD, ViP Premiere HD, Дом кино, Дом кино Премиум HD, Индийское кино, КиноПремиум HD, КиноТВ HD",
+    "Киномикс, Кинопоказ HD1, Кинопоказ HD2, Кинопремьера HD, Киносвидание, Киносемья, Кинохит, Мужское кино, НСТ (Страшное), Наш Детектив HD, Наш Кинороман HD",
+    "Наше новое кино, Остросюжетное HD, Родное кино, Русская комедия, Русский бестселлер, Русский детектив, Русский иллюзион, ТВ XXI, Bridge HD, Europa Plus TV",
+    "MTV Dance, MTV Rocks, MTV Россия, RU.TV, VH1 Classic, VH1 Europe, Муз-ТВ, Музыка Первого, Шансон ТВ, Eurosport 2 HD, Eurosport HD, Extreme Sports, Kazsport",
+    "Viasat Sport HD Россия, Бокс ТВ, КХЛ HD, КХЛ ТВ, Матч ТВ HD, Матч! Арена HD, Матч! Боец, Матч! Игра HD, Матч! Наш спорт, Матч! Футбол 1 HD, Матч! Футбол 2 HD",
+    "Матч! Футбол 3 HD, Морской, НТВ+ Наш футбол HD, Футбол 1 HD Украина, Футбол 2 HD Украина, 24Техно"
+  ]
 }
